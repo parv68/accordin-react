@@ -7,16 +7,16 @@ function Accordion(){
     function handleSingleSelection(getCurrentID){
         setSelected(getCurrentID === selected ? null : getCurrentID)
     }
-    function handleMultipleSelection(getCurrentID){
-        let cpyMultiple = [...multiple]
-        const findIndexOfCurrentID = cpyMultiple.indexOf(getCurrentID)
-
-        if(findIndexOfCurrentID === -1){
-            cpyMultiple.push(getCurrentID)
+    function handleMultipleSelection(getCurrentID) {
+        let cpyMultiple = [...multiple];
+        const findIndexOfCurrentID = cpyMultiple.indexOf(getCurrentID);
+    
+        if (findIndexOfCurrentID === -1) {
+            cpyMultiple.push(getCurrentID);
         } else {
-            cpyMultiple.splice(findIndexOfCurrentID, 1)
-            setMultiple(cpyMultiple)
+            cpyMultiple.splice(findIndexOfCurrentID, 1);
         }
+        setMultiple(cpyMultiple); 
     }
     console.log(selected, multiple);
     return(
